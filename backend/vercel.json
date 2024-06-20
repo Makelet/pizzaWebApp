@@ -1,16 +1,16 @@
 {
     "version": 2,
-    "name": "music-album",
+    "name": "lets_meal",
     "builds": [
         {
-            "src": "app.js",
+            "src": "server.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/app.js"
-        }
+            "dest": "/server.js"
+        }   
     ]
 }
