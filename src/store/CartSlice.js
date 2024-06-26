@@ -53,7 +53,7 @@ export default cartSlice.reducer;
 export function addProducts(id, name, price, img) {
     return async function fetchProductThunk(dispatch, getState) {
         try {
-            const res = await axios.post('http://localhost:3000/addcart', { id, name, price, img, qty: 1 });
+            const res = await axios.post('https://pizzawebapp.onrender.com/addcart', { id, name, price, img, qty: 1 });
             if (res.status === 200) {
                 // let data = res.json()
                 console.log(res);
@@ -68,7 +68,7 @@ export function addProducts(id, name, price, img) {
 export function getAllProducts() {
     return async function fetchProductThunk(dispatch, getState) {
         try {
-            const res = await axios.get('http://localhost:3000/getallcarts');
+            const res = await axios.get('https://pizzawebapp.onrender.com/getallcarts');
             if (res.status === 200) {
                 dispatch(setCart(res.data));
             }
@@ -81,7 +81,7 @@ export function getAllProducts() {
 export function deleteProduct(id) {
     return async function fetchProductThunk(dispatch, getState) {
         try {
-            const res = await axios.delete('http://localhost:3000/delete/' + id);
+            const res = await axios.delete('https://pizzawebapp.onrender.com/delete/' + id);
             if (res.status === 200) {
 
                 //both are valid
@@ -97,7 +97,7 @@ export function deleteProduct(id) {
 export function incQuantity(id, qty) {
     return async function fetchProductThunk(dispatch, getState) {
         try {
-            const res = await axios.post('http://localhost:3000/updateqty', { id, qty });
+            const res = await axios.post('https://pizzawebapp.onrender.com/updateqty', { id, qty });
             if (res.status === 200) {
                 dispatch(getAllProducts());
             }

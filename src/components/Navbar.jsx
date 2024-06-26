@@ -17,7 +17,7 @@ const Navbar = () => {
 
     useEffect(() => {
         if (inputVal != "") {
-            axios.get('http://localhost:3000/find?name=' + inputVal)
+            axios.get('https://pizzawebapp.onrender.com/find?name=' + inputVal)
                 .then((res) => {
                     console.log(res);
                     dispatch(removeDish());

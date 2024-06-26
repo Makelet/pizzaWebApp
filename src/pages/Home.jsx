@@ -15,7 +15,7 @@ const Home = () => {
 
 
     const handleAllData = () => {
-        axios.get('http://localhost:3000/all')
+        axios.get('https://pizzawebapp.onrender.com/all')
             .then((res) => {
                 // console.log(cart);
                 // console.log(res);
@@ -29,7 +29,7 @@ const Home = () => {
     }
 
     const handleLunchData = () => {
-        axios.get('http://localhost:3000/lunch')
+        axios.get('https://pizzawebapp.onrender.com/lunch')
             .then((res) => {
                 dispatch(removeDish());
                 dispatch(addDish(res.data));
@@ -40,7 +40,7 @@ const Home = () => {
 
     }
     const handleDinnerData = () => {
-        axios.get('http://localhost:3000/dinner')
+        axios.get('https://pizzawebapp.onrender.com/dinner')
             .then((res) => {
                 dispatch(removeDish());
                 dispatch(addDish(res.data));
@@ -50,7 +50,7 @@ const Home = () => {
             })
     }
     const handleBreakfastData = () => {
-        axios.get('http://localhost:3000/breakfast')
+        axios.get('https://pizzawebapp.onrender.com/breakfast')
             .then((res) => {
                 dispatch(removeDish());
                 dispatch(addDish(res.data));
@@ -60,7 +60,7 @@ const Home = () => {
             })
     }
     const handleSnacksData = () => {
-        axios.get('http://localhost:3000/snacks')
+        axios.get('https://pizzawebapp.onrender.com/snacks')
             .then((res) => {
                 dispatch(removeDish());
                 dispatch(addDish(res.data));

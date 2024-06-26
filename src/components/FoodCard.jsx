@@ -34,7 +34,7 @@ const FoodCard = ({ demo }) => {
 
     const handleLike = (dbId, id, name, price, img, rating, like) => {
 
-        axios.put('http://localhost:3000/like', { dbId })
+        axios.put('https://pizzawebapp.onrender.com/like', { dbId })
             .then((res) => {
                 console.log(res.data);
                 // res.data.isLike = !res.data.isFLike;
@@ -67,7 +67,7 @@ const FoodCard = ({ demo }) => {
         // dispatch(getAllProducts());
         dispatch(addProducts(id, name, price, img));
 
-        // axios.post('http://localhost:3000/addcart', { id, name, price, img, qty: 1 })
+        // axios.post('https://pizzawebapp.onrender.com/addcart', { id, name, price, img, qty: 1 })
         //     .then((res) => {
         //         // console.log(res)
         //     })
